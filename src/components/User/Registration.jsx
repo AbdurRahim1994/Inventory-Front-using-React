@@ -43,7 +43,7 @@ const Registration = () => {
         else {
             const res = await UserRegistration(fName, lName, mobile, email, password, image)
             if (res === true) {
-                navigate('/login')
+                navigate('/')
             }
         }
     }
