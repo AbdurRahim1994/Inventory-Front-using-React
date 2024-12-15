@@ -2,4 +2,4 @@
 //export const BaseURL='https://inventory-api-using-express-2yqt-ei412bf0x-abdurrahim1994.vercel.app'
 //export const BaseURL='https://inventory-api-using-express-2yqt.vercel.app/'
 export const BaseURL='https://inventory-management-dfkryo2js-abdurrahim1994s-projects.vercel.app/?vercelToolbarCode=DumwKerrferl4j1'
-//export const BaseURL='http://localhost:8080/api/v1'
+ //export const BaseURL='http://localhost:8080/api/v1'
