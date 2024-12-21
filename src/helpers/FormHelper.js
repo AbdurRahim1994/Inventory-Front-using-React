@@ -1,15 +1,16 @@
-import cogoToast from "cogo-toast";
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const emailRegex = /^\S+@\S+\.\S+$/
 const mobileNumberRegex = /(^(\+88|0088)?(01){1}[3456789]{1}(\d){8})$/
 
 class FormHelper {
     SuccessToast(msg) {
-        cogoToast.success(msg, { position: "top-center", hideAfter: 3 })
+        toast.success(msg, { position: "top-center", autoClose: 3000 })
     }
 
     ErrorToast(msg) {
-        cogoToast.error(msg, { position: "top-center", hideAfter: 3 })
+        toast.error(msg, { position: "top-center", autoClose: 3000 })
     }
 
     IsEmpty(value) {
