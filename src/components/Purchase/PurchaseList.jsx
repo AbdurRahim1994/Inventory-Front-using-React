@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { PurchaseListRequest } from '../../apiRequests/PurchaseAPIRequest'
 import { useSelector } from 'react-redux';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 import moment from 'moment/moment';
 import { AiOutlineEye } from 'react-icons/ai'
 import ReactPaginate from 'react-paginate';
@@ -99,11 +99,17 @@ const PurchaseList = () => {
                                                                     )
                                                                 }
                                                             </td>
-                                                            <td><p className='text-start text-xs'><CurrencyFormat value={item?.grandTotal} thousandSeparator={true} prefix='$' displayType='text'></CurrencyFormat></p></td>
+                                                            {/* <td><p className='text-start text-xs'><CurrencyFormat value={item?.grandTotal} thousandSeparator={true} prefix='$' displayType='text'></CurrencyFormat></p></td>
                                                             <td><p className='text-start text-xs'><CurrencyFormat value={item?.shippingCost} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat></p></td>
                                                             <td><p className='text-start text-xs'><CurrencyFormat value={item?.vatTax} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat></p></td>
                                                             <td><p className='text-start text-xs'><CurrencyFormat value={item?.otherCost} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat></p></td>
                                                             <td><p className='text-start text-xs'><CurrencyFormat value={item?.discount} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat></p></td>
+                                                            <td><p className='text-start text-xs'>{moment(item?.createdDate).format('MMMM DD YYYY')}</p></td> */}
+                                                            <td><p className='text-start text-xs'>{item?.grandTotal}</p></td>
+                                                            <td><p className='text-start text-xs'>{item?.shippingCost}</p></td>
+                                                            <td><p className='text-start text-xs'>{item?.vatTax}</p></td>
+                                                            <td><p className='text-start text-xs'>{item?.otherCost}</p></td>
+                                                            <td><p className='text-start text-xs'>{item?.discount}s</p></td>
                                                             <td><p className='text-start text-xs'>{moment(item?.createdDate).format('MMMM DD YYYY')}</p></td>
                                                             <td>
                                                                 <button className='btn btn-outline-light btn-sm text-success mb-0 p-2 ms-2'>

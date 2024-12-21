@@ -5,7 +5,7 @@ import { PurchaseReportByDateRequest } from '../../apiRequests/ReportAPIRequest'
 import { useSelector } from 'react-redux';
 import moment from 'moment';
 import exportFromJSON from 'export-from-json';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 
 const PurchaseReport = () => {
     let fromDateRef = useRef()
@@ -85,7 +85,8 @@ const PurchaseReport = () => {
                         <div className='col-lg-12 mt-3'>
                             <div className='card'>
                                 <div className='card-body'>
-                                    <h4>Total : <CurrencyFormat value={PurchaseByDateList[0]['TotalAmount'][0]['TotalAmount']} thousandSeparator={true} prefix='$' displayType='text'></CurrencyFormat></h4>
+                                    {/* <h4>Total : <CurrencyFormat value={PurchaseByDateList[0]['TotalAmount'][0]['TotalAmount']} thousandSeparator={true} prefix='$' displayType='text'></CurrencyFormat></h4> */}
+                                    <h4>Total : {PurchaseByDateList[0]['TotalAmount'][0]['TotalAmount']}</h4>
                                     <div className='row'>
                                         <div className='col-lg-3'>
                                             <button onClick={OnExport.bind(this, 'csv')} className='btn btn-success btn-sm'>Download CSV</button>

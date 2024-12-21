@@ -4,7 +4,7 @@ import { ErrorToast, IsEmpty } from '../../helpers/FormHelper';
 import { useSelector } from 'react-redux';
 import moment from 'moment/moment';
 import exportFromJSON from 'export-from-json';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 
 const ExpenseReport = () => {
     let fromDateRef = useRef()
@@ -79,7 +79,8 @@ const ExpenseReport = () => {
                         <div className='col-lg-12 mt-3'>
                             <div className='card'>
                                 <div className='card-body'>
-                                    <h4>Total : <CurrencyFormat value={ExpenseByDateList[0]['TotalAmount'][0]['TotalAmount']} thousandSeparator={true} prefix='$' displayType='text'></CurrencyFormat></h4>
+                                    {/* <h4>Total : <CurrencyFormat value={ExpenseByDateList[0]['TotalAmount'][0]['TotalAmount']} thousandSeparator={true} prefix='$' displayType='text'></CurrencyFormat></h4> */}
+                                    <h4>Total : {ExpenseByDateList[0]['TotalAmount'][0]['TotalAmount']}</h4>
                                     <div className='row'>
                                         <div className='col-lg-3'>
                                             <button onClick={() => OnExport('csv')} className='btn btn-success btn-sm'>Download CSV</button>

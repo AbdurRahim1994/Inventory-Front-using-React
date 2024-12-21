@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {DeleteExpenseRequest, ExpenseListRequest} from '../../apiRequests/ExpenseAPIRequest'
 import { useSelector } from 'react-redux';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 import { NavLink } from 'react-router-dom';
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
 import ReactPaginate from 'react-paginate';
@@ -102,7 +102,8 @@ const ExpenseList = () => {
                                                             <td><p className='text-xs text-start'>{type?.name}</p></td>
                                                             )
                                                         }
-                                                        <td><p className='text-xs text-start'>{<CurrencyFormat value={item?.amount} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat>}</p></td>
+                                                        {/* <td><p className='text-xs text-start'>{<CurrencyFormat value={item?.amount} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat>}</p></td> */}
+                                                        <td><p className='text-xs text-start'>{item?.amount}</p></td>
                                                         <td><p className='text-xs text-start'>{item?.note}</p></td>
                                                         <td>
                                                             <NavLink to={`/ExpenseCreateUpdatePage?id=${item?._id}`} className='btn btn-outline-light btn-sm text-info mb-0 p-2'>
