@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import CurrencyFormat from 'react-currency-format';
+//import CurrencyFormat from 'react-currency-format';
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts';
 import { ExpenseSummaryRequest, PurchaseSummaryRequest, ReturnSummaryRequest, SalesSummaryRequest } from '../../apiRequests/SummaryAPIRequest'
 import { useSelector } from 'react-redux';
@@ -32,7 +32,8 @@ const Dashboard = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <span className='h5'>
-                                <CurrencyFormat value={ExpenseTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat>
+                                {/* <CurrencyFormat value={ExpenseTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat> */}
+                                {ExpenseTotal}
                             </span>
                             <p className='font-weight-bolder'>Total Expense</p>
                         </div>
@@ -43,7 +44,8 @@ const Dashboard = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <span className='h5'>
-                                <CurrencyFormat value={SalesTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat>
+                                {/* <CurrencyFormat value={SalesTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat> */}
+                                {SalesTotal}
                             </span>
                             <p className='font-weight-bolder'>Total Sales</p>
                         </div>
@@ -54,7 +56,8 @@ const Dashboard = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <span className='h5'>
-                                <CurrencyFormat value={PurchaseTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat>
+                                {/* <CurrencyFormat value={PurchaseTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat> */}
+                                {PurchaseTotal}
                             </span>
                             <p className='font-weight-bolder'>Total Purchase</p>
                         </div>
@@ -65,7 +68,8 @@ const Dashboard = () => {
                     <div className='card'>
                         <div className='card-body'>
                             <span className='h5'>
-                                <CurrencyFormat value={ReturnTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat>
+                                {/* <CurrencyFormat value={ReturnTotal} displayType='text' thousandSeparator={true} prefix='$'></CurrencyFormat> */}
+                                {ReturnTotal}
                             </span>
                             <p className='font-weight-bolder'>Total Return</p>
                         </div>
